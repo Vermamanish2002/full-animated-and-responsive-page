@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Data and Title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Lancer</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <!-- Logo -->
+        <img src="images/logo.png" class="logo">
+        
+        <!-- Navigation Menu Links -->
+        <ul id="menu-links">
+            <li><a href="">Home</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">About us</a></li>
+        </ul>
+        
+        <!-- Navigation Button -->
+        <button class="nav-btn">Get started <img src="images/arrow-white.png"></button>
+        
+        <!-- Menu Icon for Mobile -->
+        <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
+    </nav>
+
+    <!-- Header Section -->
+    <div class="header">
+        <div class="header-content">
+            <!-- Header Title -->
+            <h1><span>FREE</span> <br> <span>LANCER</span></h1>
+            
+            <!-- Button Container -->
+            <div class="btn-container">
+                <button class="btn-dark">Request Call back <img src="images/phone.png"></button>
+                <button class="btn-light">Know more <img src="images/arrow-black.png"></button>
+            </div>
+            
+            <!-- Header Description -->
+            <p>Passionate UI/UX designers with 10+ years of experience.</p>
+        </div>
+        
+        <!-- User Image -->
+        <img src="images/user.png" class="user-img">
+    </div>
+
+    <!-- JavaScript Section -->
+    <script>
+        // Variables for Navigation Bar and Menu Links
+        let navBar = document.querySelector('nav')
+        let menuLinks = document.getElementById("menu-links")
+
+        // Function to Toggle Menu Visibility
+        function toggleMenu() {
+            menuLinks.classList.toggle('show-menu');
+        }
+
+        // Function to Change Navigation Bar Background on Scroll
+        window.onscroll = function () {
+            if (window.scrollY > 0) {
+                navBar.style.background = '#eefff9'
+            } else {
+                navBar.style.background = 'transparent'
+            }
+        }
+    </script>
+</body>
+
+</html>
